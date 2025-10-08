@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactPage() {
@@ -27,10 +28,12 @@ export default function ContactPage() {
       {/* 🔹 Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
         <div className="absolute inset-0">
-           <img
-            src="/contact.jpg"
-            alt="About Flavory"
-            className="w-full h-full object-cover"
+          <Image
+            src="/contact.jpg" 
+            alt="Contact Flavory"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-[#2C4A52]/80" />
         </div>
@@ -50,10 +53,10 @@ export default function ContactPage() {
       <div className="py-16 px-6">
         <div className="max-w-5xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-3">
-            Let’s <span className="text-orange-600">Connect</span>
+            Let&apos;s <span className="text-orange-600">Connect</span>
           </h2>
           <p className="text-gray-600">
-            Have a question, feedback, or partnership idea? We'd love to hear from you!
+            Have a question, feedback, or partnership idea? We&apos;d love to hear from you!
           </p>
         </div>
 
@@ -97,7 +100,7 @@ export default function ContactPage() {
 
             {submitted ? (
               <div className="p-6 text-green-700 bg-green-50 rounded-lg">
-                ✅ Thank you for your message! We'll get back to you soon.
+                ✅ Thank you for your message! We&apos;ll get back to you soon.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
